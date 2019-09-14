@@ -30,10 +30,10 @@
 Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicación que guarde la cantidad de calorías consumidas por comida.
 
 
-* *[ ] **00_INICIO:**
-    * *[ ] Preparar ambiente para el API (nuestro primer endpoint):
+* *[x] **00_INICIO:**
+    * *[x] Preparar ambiente para el API (nuestro primer endpoint):
         * Instalar dependencias básicas para levantar un servicio con **Nodejs** usando **Expressjs**
-    * *[ ] Preparar ambiente para el Cliente (hola mundo en reactjs)
+    * *[x] Preparar ambiente para el Cliente (hola mundo en reactjs)
         * Instalar dependencias básicas para correr **Reactjs** usando **Webpack**
 
 * *[ ] **01_ALTA_DE_COMIDA:**
