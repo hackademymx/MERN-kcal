@@ -1,5 +1,17 @@
 # Aplicación MERN Hackademy
 
+**Instalación**
+
+1. Clona el proyecto `git@github.com:oscaroceguera/MERN-kcal-private.git`
+2. Frontend:
+  * Accede al front en la carpeta `cliente`
+  * Instala dependecias del front con el comando `npm install` en la carpeta
+  * Correr nuestra App con el comando `npm start`
+3. Backend:
+  * Accede al back en la carpeta `server`
+  * instala dependecias con `npm install` en la carpeta server
+  * Correr nuestra API con el comando `npm start`
+
 
 **Requisitos:**
 
