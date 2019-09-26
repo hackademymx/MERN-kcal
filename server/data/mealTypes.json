@@ -1,0 +1,18 @@
+[
+  {
+    "uuid": "2e1bf63e-1a29-4085-b9b1-b58ac6a8002b",
+    "value": "Desayuno"
+  },
+  {
+    "uuid": "0f0c64d6-1466-4269-bc48-b9f60b627774",
+    "value": "Colación"
+  },
+  {
+    "uuid": "9907ffd2-0c3e-4540-b9e5-2530262eb81e",
+    "value": "Comida"
+  },
+  {
+    "uuid": "56689b29-b266-4931-ad3c-1ca323831d8a",
+    "value": "Cena"
+  }
+]

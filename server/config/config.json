@@ -1,0 +1,10 @@
+{
+  "test": {
+    "PORT": 4000,
+    "MONGO_URI": "mongodb://localhost:27017/CaloriesHackTest"
+  },
+  "development": {
+    "PORT": 5000,
+    "MONGO_URI": "mongodb://localhost:27017/CaloriesHack"
+  }
+}
