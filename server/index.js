@@ -1,8 +1,19 @@
 require('./config/config')
 
 const express = require('express')
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+
+const { mongoose } = require('./db/mongoose')
+
+
 const app = express()
-const port = 3000
+const port = process.env.PORT
+
+app.use(cors())
+app.use(morgan('dev'))
+app.use(bodyParser.json())
 
 const routes = require('./routes')
 
