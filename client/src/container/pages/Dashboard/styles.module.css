@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.section {
+  width: 93%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.containerBtns {
+  text-align: center;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+}

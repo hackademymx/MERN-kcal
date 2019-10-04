@@ -1,0 +1,26 @@
+.container {
+  /* border: 1px solid; */
+}
+
+.title {
+  color: #f44336;
+  text-align: center;
+  padding: 1em;
+}
+
+.paper {
+  width: 50%;
+  margin: 1em auto;
+  padding: 1em;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.btnContainer {
+  text-align: right;
+  margin-top: .5em;
+}

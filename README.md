@@ -73,13 +73,13 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
         * mealType: referencia al catalogo de tipo de alimento
     * *[x] **[BACK]** - Crear controlador de alta de comida
     * *[x] **[BACK]** - Crear ruta de acceso para alta de comida (POST)
-    * *[ ] **[FRONT]** - Input de texto para introducir nombre de la comida (Pozole, Menudo, Ceviche, etc).
-    * *[ ] **[FRONT]** - Dropdown que consultara al catalogo de tipo de comida (Desayuno, Comida, Colación, Cena).
-    * *[ ] **[FRONT]** - Datepicker que registra la fecha de consumo.
-    * *[ ] **[FRONT]** - Autocomplete de alimentos utilizados, el cual consultara al catalogo de alimentos (pollo, cebolla, tomates, etc):
+    * *[x] **[FRONT]** - Input de texto para introducir nombre de la comida (Pozole, Menudo, Ceviche, etc).
+    * *[x] **[FRONT]** - Dropdown que consultara al catalogo de tipo de comida (Desayuno, Comida, Colación, Cena).
+    * *[x] **[FRONT]** - Datepicker que registra la fecha de consumo.
+    * *[x] **[FRONT]** - Autocomplete de alimentos utilizados, el cual consultara al catalogo de alimentos (pollo, cebolla, tomates, etc):
       * Autocomplete component: `https://gist.github.com/oscaroceguera/621a08f64e1b391059d5a0fc6bff1ccd`
       * Autocomplete functions `https://gist.github.com/oscaroceguera/bdf5512e13b399e9b2042dad7078c791`
-    * *[ ] **[FRONT]** - Guardar comida.
+    * *[x] **[FRONT]** - Guardar comida.
     
 * *[ ] **02_LISTADO_COMIDAS:**
   * *[ ] **[BACK]** - Crear controlador de listado de comidas
