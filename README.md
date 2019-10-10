@@ -81,10 +81,10 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
       * Autocomplete functions `https://gist.github.com/oscaroceguera/bdf5512e13b399e9b2042dad7078c791`
     * *[x] **[FRONT]** - Guardar comida.
     
-* *[ ] **02_LISTADO_COMIDAS:**
-  * *[ ] **[BACK]** - Crear controlador de listado de comidas
-  * *[ ] **[BACK]** - Crear ruta de acceso de listado de comidas (GET)
-  * *[ ] **[FRONT]** - Listado de comidas
+* *[x] **02_LISTADO_COMIDAS:**
+  * *[x] **[BACK]** - Crear controlador de listado de comidas
+  * *[x] **[BACK]** - Crear ruta de acceso de listado de comidas (GET)
+  * *[x] **[FRONT]** - Listado de comidas
 
 * *[ ] **03_ACTUALIZAR_COMIDA:**
   * *[ ] **[BACK]** - Crear controlador para obtener el de detalle de comida
