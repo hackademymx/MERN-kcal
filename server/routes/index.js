@@ -17,6 +17,7 @@ module.exports = app => {
   router.get('/catalogs/mealTypes', mealTypes.getMealTypes)
 
   router.post('/meals', meal.addMeal)
+  router.get('/meals', meal.getMeals)
 
   app.use('/api', router)
 }

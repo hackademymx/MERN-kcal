@@ -7,7 +7,7 @@ exports.addFoodType = async (req, res) => {
     const data = await FoodType.insertMany(foodTypes)
     res.send(data)
   } catch(error) {
-    res.status(400).send(error)
+    res.status(500).send(error)
   }
 }
 
@@ -17,6 +17,6 @@ exports.getFoodTypes = async (req, res) => {
 
     res.send(data)
   } catch (error) {
-    res.status(400).send(error)
+    res.status(500).send(error)
   }
 }

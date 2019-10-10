@@ -28,6 +28,20 @@ exports.addMeal = async (req, res) => {
 
     res.send(doc)
   } catch (error) {
-    res.status(400).send(error)
+    res.status(500).send(error)
+  }
+}
+
+exports.getMeals = async (req, res) => {
+  try {
+    const meals = await Meal.find()
+      .populate('mealType')
+      .populate('foods')
+      .sort('-date')
+
+    res.send(meals)
+
+  } catch (error) {
+    res.status(500).send(error)
   }
 }
