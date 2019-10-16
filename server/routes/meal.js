@@ -3,7 +3,6 @@ const { FoodType } = require('../models/foodType')
 const { MealType } = require('../models/mealType')
 
 exports.addMeal = async (req, res) => {
-  console.log("TCL: exports.addMeal -> req", req.body)
   try {
     let foods = []
 
@@ -43,5 +42,47 @@ exports.getMeals = async (req, res) => {
 
   } catch (error) {
     res.status(500).send(error)
+  }
+}
+
+exports.getMealById = async(req, res) => {
+  const { uuid } = req.params
+  try {
+    const meal = await Meal.findOne({ uuid })
+      .populate('foods')
+      .populate('mealType')
+
+    if (!meal) return res.status(404).send()
+
+    res.send(meal)
+  } catch (error) {
+    res.send(505).send(error)
+  }
+}
+
+exports.updateMeal = async (req, res) => {
+  const { params: { uuid }, body } = req
+  let foods = []
+
+  try {
+    await Promise.all(body.foods.map(async (item) => {
+      const result = await FoodType.findOne({ uuid: item })
+      foods.push(result._id)
+    }))
+
+    body.foods = foods
+
+    const mealType = await MealType.findOne({ uuid: body.mealType })
+    body.mealType = mealType._id
+
+    const meal = await Meal.findOneAndUpdate({ uuid: uuid }, { $set: body }, { new: true })
+
+    if (!meal) {
+      return res.status(404).send()
+    }
+
+    res.send(meal)
+  } catch (error) {
+    res.status(400).send(error)
   }
 }

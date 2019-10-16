@@ -89,7 +89,7 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
 * *[ ] **03_ACTUALIZAR_COMIDA:**
   * *[ ] **[BACK]** - Crear controlador para obtener el de detalle de comida
   * *[ ] **[BACK]** - Crear ruta de acceso para obtener el detalle de comida (GET)
-  * *[ ] **[FRONT]** - Mostrar de talle de comida
+  * *[ ] **[FRONT]** - Mostrar de detalle de comida
   * *[ ] **[BACK]** - Crear controlador para actualizar comida
   * *[ ] **[BACK]** - Crear ruta para acceder a actualizar comida (PATCH)
   * *[ ] **[FRONT]** - Actualizar comida

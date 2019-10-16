@@ -18,6 +18,8 @@ module.exports = app => {
 
   router.post('/meals', meal.addMeal)
   router.get('/meals', meal.getMeals)
+  router.get('/meals/:uuid', meal.getMealById)
+  router.patch('/meals/:uuid', meal.updateMeal)
 
   app.use('/api', router)
 }

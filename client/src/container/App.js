@@ -25,6 +25,7 @@ const App = (props) => {
       <Switch>
         <Route exact path='/' component={Dashboard} />
         <Route path='/add-calories' component={Calories} />
+        <Route path='/detail/:uuid' component={Calories} />
         <Route path='/summary' component={Summary} />
         <Route component={NoMatch} />
       </Switch>

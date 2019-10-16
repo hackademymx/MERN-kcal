@@ -47,6 +47,12 @@ class Dashboard extends React.Component {
     this.props.history.push('/add-calories');
   }
 
+  getDetail = uuid => e => {
+    console.log('getDetail')
+    e && e.preventDefault()
+    this.props.history.push(`/detail/${uuid}`)
+  }
+
   render () {
     const { loading, error, items } = this.state
 
@@ -59,7 +65,7 @@ class Dashboard extends React.Component {
     }
 
     const ErrorMsg = <p className={styles.error}>{error}</p>
-    const List = error ? ErrorMsg : <KcalList items={items} />
+    const List = error ? ErrorMsg : <KcalList items={items} onClick={this.getDetail} />
 
     return (
       <div className={styles.container}>

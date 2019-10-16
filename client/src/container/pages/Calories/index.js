@@ -8,6 +8,7 @@ import axios from 'axios'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import format from 'date-fns/format'
 import keycode from 'keycode'
+import { UTCDate } from 'helpers'
 
 const HOST = process.env.API_URL
 
@@ -30,6 +31,12 @@ class Calories extends Component {
   state = initalState
 
   componentDidMount() {
+    const {uuid} = this.props.match.params
+
+    if (uuid) {
+      this.getDetail(uuid)
+    }
+
     this.load()
   }
 
@@ -128,6 +135,65 @@ class Calories extends Component {
     }
   }
 
+  async getDetail (uuid) {
+    this.setState({
+      loading: true,
+      error: null
+    })
+
+    try {
+
+      const data = (await axios.get(`${HOST}/api/meals/${uuid}`)).data
+
+      this.setState({
+        loading: false,
+        meal: data.meal,
+        mealType: data.mealType.uuid,
+        date: UTCDate(data.date, 'yyyy-MM-dd'),
+        selectedItem: data.foods.map(i => i.label),
+        selectedFood: data.foods.map(i => i.uuid)
+      })
+
+    } catch(error) {
+      this.setState({
+        loading: false,
+        error: error.message
+      })
+    }
+  }
+
+  onUpdate = async (e) => {
+    this.setState({
+      loading: true,
+      error: null
+    })
+
+    const { uuid } = this.props.match.params
+    const { meal, selectedFood, mealType, date } = this.state
+    const data = {
+      meal,
+      selectedFood,
+      mealType,
+      date
+    }
+
+    try {
+      const response = await axios.patch(`${HOST}/api/meals/${uuid}`, data)
+
+      this.setState({
+        loading: false
+      })
+
+      this.props.history.push('/')
+
+    } catch(error) {
+      this.setState({
+        error: error.message,
+        loading: false
+      })
+    }
+  }
+
   render () {
     console.log('STATE ', this.state)
 
@@ -142,7 +208,7 @@ class Calories extends Component {
     }
 
     const disabled = !!meal && !!mealType && selectedItem.length > 0
-
+    const isUpdate = this.props.match.params.uuid
 
     return (
       <div className={styles.container}>
@@ -196,9 +262,9 @@ class Calories extends Component {
                   name='mealType'
                   variant='contained'
                   color='secondary'
-                  onClick={this.onSave}
+                  onClick={isUpdate ? this.onUpdate : this.onSave}
                 >
-                  Guardar
+                  {isUpdate ? 'Actualizar' : 'Guardar'}
                 </Button>
               </div>
             </Paper>
