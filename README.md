@@ -86,13 +86,13 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
   * *[x] **[BACK]** - Crear ruta de acceso de listado de comidas (GET)
   * *[x] **[FRONT]** - Listado de comidas
 
-* *[ ] **03_ACTUALIZAR_COMIDA:**
-  * *[ ] **[BACK]** - Crear controlador para obtener el de detalle de comida
-  * *[ ] **[BACK]** - Crear ruta de acceso para obtener el detalle de comida (GET)
-  * *[ ] **[FRONT]** - Mostrar de detalle de comida
-  * *[ ] **[BACK]** - Crear controlador para actualizar comida
-  * *[ ] **[BACK]** - Crear ruta para acceder a actualizar comida (PATCH)
-  * *[ ] **[FRONT]** - Actualizar comida
+* *[x] **03_ACTUALIZAR_COMIDA:**
+  * *[x] **[BACK]** - Crear controlador para obtener el de detalle de comida
+  * *[x] **[BACK]** - Crear ruta de acceso para obtener el detalle de comida (GET)
+  * *[x] **[FRONT]** - Mostrar de detalle de comida
+  * *[x] **[BACK]** - Crear controlador para actualizar comida
+  * *[x] **[BACK]** - Crear ruta para acceder a actualizar comida (PATCH)
+  * *[x] **[FRONT]** - Actualizar comida
 
 * *[ ] **04_ELIMINAR_COMIDA:**
   * *[ ] **[BACK]** - Crear controlador para elimiar comida
