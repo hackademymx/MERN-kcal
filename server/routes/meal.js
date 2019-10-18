@@ -65,15 +65,20 @@ exports.updateMeal = async (req, res) => {
   let foods = []
 
   try {
-    await Promise.all(body.foods.map(async (item) => {
-      const result = await FoodType.findOne({ uuid: item })
-      foods.push(result._id)
-    }))
 
-    body.foods = foods
+    if (body.foods) {
+      await Promise.all(body.foods.map(async (item) => {
+        const result = await FoodType.findOne({ uuid: item })
+        foods.push(result._id)
+      }))
 
-    const mealType = await MealType.findOne({ uuid: body.mealType })
-    body.mealType = mealType._id
+      body.foods = foods
+    }
+
+    if (body.mealType) {
+      const mealType = await MealType.findOne({ uuid: body.mealType })
+      body.mealType = mealType._id
+    }
 
     const meal = await Meal.findOneAndUpdate({ uuid: uuid }, { $set: body }, { new: true })
 
@@ -83,6 +88,6 @@ exports.updateMeal = async (req, res) => {
 
     res.send(meal)
   } catch (error) {
-    res.status(400).send(error)
+    res.status(500).send(error)
   }
 }
