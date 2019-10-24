@@ -194,6 +194,31 @@ class Calories extends Component {
     }
   }
 
+  onDelete = async e => {
+    this.setState({
+      loading: true,
+      error: null
+    })
+
+    const { uuid } = this.props.match.params
+
+    try {
+
+      await axios.delete(`${HOST}/api/meals/${uuid}`)
+
+      this.setState({
+        loading: false
+      })
+
+      this.props.history.push('/')
+    } catch (error) {
+      this.setState({
+        loading: false,
+        error: error.message
+      })
+    }
+  }
+
   render () {
     console.log('STATE ', this.state)
 
@@ -257,6 +282,16 @@ class Calories extends Component {
                 handleDelete={this.handleDelete}
               />
               <div className={styles.btnContainer}>
+                {isUpdate && (
+                  <Button
+                    className={styles.btnDelete}
+                    name='mealType'
+                    variant='contained'
+                    onClick={this.onDelete}
+                  >
+                    Eliminar
+                  </Button>
+                )}
                 <Button
                   disabled={!disabled}
                   name='mealType'

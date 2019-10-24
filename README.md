@@ -94,10 +94,10 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
   * *[x] **[BACK]** - Crear ruta para acceder a actualizar comida (PATCH)
   * *[x] **[FRONT]** - Actualizar comida
 
-* *[ ] **04_ELIMINAR_COMIDA:**
-  * *[ ] **[BACK]** - Crear controlador para elimiar comida
-  * *[ ] **[BACK]** - Crear url para acceder a elimiar comida (DELETE)
-  * *[ ] **[FRONT]** - Eliminar comida
+* *[x] **04_ELIMINAR_COMIDA:**
+  * *[x] **[BACK]** - Crear controlador para elimiar comida
+  * *[x] **[BACK]** - Crear url para acceder a elimiar comida (DELETE)
+  * *[x] **[FRONT]** - Eliminar comida
 
 * *[ ] **05_SUMA_DE_KCAL:**
   * *[ ] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**

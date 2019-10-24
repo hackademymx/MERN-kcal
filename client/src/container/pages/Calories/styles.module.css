@@ -24,3 +24,9 @@
   text-align: right;
   margin-top: .5em;
 }
+
+.btnDelete {
+  margin-right: 2em;
+  background: #f44336;
+  color: white;
+}

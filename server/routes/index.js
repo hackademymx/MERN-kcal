@@ -20,6 +20,7 @@ module.exports = app => {
   router.get('/meals', meal.getMeals)
   router.get('/meals/:uuid', meal.getMealById)
   router.patch('/meals/:uuid', meal.updateMeal)
+  router.delete('/meals/:uuid', meal.deleteMeal)
 
   app.use('/api', router)
 }

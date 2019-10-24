@@ -65,7 +65,7 @@ exports.updateMeal = async (req, res) => {
   let foods = []
 
   try {
-
+    // TODO: Crear TDD para repara este issue
     if (body.foods) {
       await Promise.all(body.foods.map(async (item) => {
         const result = await FoodType.findOne({ uuid: item })
@@ -89,5 +89,19 @@ exports.updateMeal = async (req, res) => {
     res.send(meal)
   } catch (error) {
     res.status(500).send(error)
+  }
+}
+
+exports.deleteMeal = async (req, res) => {
+  const { uuid } = req.params
+  try {
+    const meal = await Meal.findOneAndRemove({ uuid })
+
+    if (!meal) return res.status(404).send()
+
+    res.send(meal)
+
+  } catch(error) {
+    res.status(505).send()
   }
 }
