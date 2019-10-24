@@ -100,14 +100,14 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
   * *[x] **[FRONT]** - Eliminar comida
 
 * *[ ] **05_SUMA_DE_KCAL:**
-  * *[ ] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**
-  * *[ ] **[BACK]** - Crear ruta para obtener la suma de calorias **Por mes** (GET)
+  * *[x] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**
+  * *[x] **[BACK]** - Crear ruta para obtener la suma de calorias **Por mes** (GET)
   * *[ ] **[FRONT]** - Mostrar suma de calorias por mes
-  * *[ ] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**
-  * *[ ] **[BACK]** - Crear ruta para obtener la suma de calorias **Por año** (GET)
+  * *[x] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**
+  * *[x] **[BACK]** - Crear ruta para obtener la suma de calorias **Por año** (GET)
   * *[ ] **[FRONT]** - Mostrar suma de calorias por año
-  * *[ ] **[BACK]** - Crear controlador para obtener la suma de calorias **Por día**
-  * *[ ] **[BACK]** - Crear ruta para obtener la suma de calorias **Por día** (GET)
+  * *[x] **[BACK]** - Crear controlador para obtener la suma de calorias **Por día**
+  * *[x] **[BACK]** - Crear ruta para obtener la suma de calorias **Por día** (GET)
   * *[ ] **[FRONT]** - Mostrar suma de calorias por día
 
 ## Nice to have
