@@ -6,6 +6,8 @@ import axios from 'axios'
 import Fab from '@material-ui/core/Fab'
 import AddIcon from '@material-ui/icons/Add'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import IconButton from '@material-ui/core/IconButton';
+import Assessment from '@material-ui/icons/Assessment'
 
 import {KcalList} from 'component'
 
@@ -47,6 +49,11 @@ class Dashboard extends React.Component {
     this.props.history.push('/add-calories');
   }
 
+  goToSummary = event => {
+    event && event.preventDefault()
+    this.props.history.push('/summary');
+  }
+
   getDetail = uuid => e => {
     console.log('getDetail')
     e && e.preventDefault()
@@ -73,6 +80,14 @@ class Dashboard extends React.Component {
         <div className={styles.section}>
           {List}
           <div className={styles.containerBtns}>
+            <IconButton
+              color='primary'
+              aria-label='charts'
+              onClick={this.goToSummary}
+            >
+              <Assessment style={{ fontSize: '46px', color: '#ffc107' }} />
+            </IconButton>
+            <br />
             <Fab
               size='medium'
               color='primary'
