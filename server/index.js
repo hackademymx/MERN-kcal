@@ -1,28 +1,12 @@
-require('./config/config')
-
-const express = require('express')
-const morgan = require('morgan')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-
-const { mongoose } = require('./db/mongoose')
-
-
-const app = express()
+const app = require('./app')
 const port = process.env.PORT
 
-app.use(cors())
-app.use(morgan('dev'))
-app.use(bodyParser.json())
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`server is listening on ${port}`);
+  });
+}
 
-const routes = require('./routes')
-
-routes(app)
-
-app.listen(port, err => {
-  if (err) {
-    return console.log('Ocurrio un error', err)
-  }
-
-  console.log(`http://localhost:${port}`)
-})
+module.exports = {
+  app
+};
