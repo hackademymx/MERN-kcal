@@ -1,14 +1,11 @@
-const supertest = require('supertest')
-const { app } = require('../index')
-const { MealType } = require("../models/mealType");
+const request = require("supertest");
+const app = require("../app");
 const { populateFoodtypes } = require("./utils/populateFoodTypes");
 
-function test () {
-  return supertest(app);
-}
+beforeEach(populateFoodtypes);
 
-describe('Food types catalog', () => {
-  it('Should get all catalogTypes list', async () => {
-    const res = await test().get("/api/catalogs/foodTypes").expect(200);
-  })
-})
+test("[Food Types Catalog] - Should get all catalogTypes list", async () => {
+  const res = await request(app)
+    .get("/api/catalogs/foodTypes")
+    .expect(200);
+});

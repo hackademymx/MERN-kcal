@@ -48,7 +48,7 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
     * *[x] Preparar ambiente para el Cliente (hola mundo en reactjs)
         * Instalar dependencias básicas para correr **Reactjs** usando **Webpack**
 
-* *[ ] **01_ALTA_DE_COMIDA:**
+* *[x] **01_ALTA_DE_COMIDA:**
 	* *[x] **[BACK]** - Crear el modelo de tipo de comida:
         * uuid: string
         * value: string
@@ -99,7 +99,7 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
   * *[x] **[BACK]** - Crear url para acceder a elimiar comida (DELETE)
   * *[x] **[FRONT]** - Eliminar comida
 
-* *[ ] **05_SUMA_DE_KCAL:**
+* *[x] **05_SUMA_DE_KCAL:**
   * *[x] **[BACK]** - Crear controlador para obtener la suma de calorias **Por mes**
   * *[x] **[BACK]** - Crear ruta para obtener la suma de calorias **Por mes** (GET)
   * *[x] **[FRONT]** - Mostrar suma de calorias por mes
@@ -112,8 +112,8 @@ Utilizando la arquitectura **MERN** (Mongo, Express, React, Node), crear aplicac
 
 ## Nice to have
 
-* *[ ] **5.1_TDD_BACK_BONUS**
-  * *[ ] **[BACK]** - TDD
+* *[x] **5.1_TDD_BACK_BONUS**
+  * *[x] **[BACK]** - TDD
 
 * *[ ] **5.2_TDD_FRONT_BONUS**
   * *[ ] **[FRONT]** - TDD

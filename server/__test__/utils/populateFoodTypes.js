@@ -1,10 +1,10 @@
 const { FoodType } = require('../../models/foodType')
 const foodTypes = require('../../data/foodTypes.json')
 
-const populateFoodTypes = (done) => {
-  FoodType.deleteMany({}.then(() => {
+const populateFoodtypes = (done) => {
+  FoodType.deleteMany({}).then(() => {
     return FoodType.insertMany(foodTypes)
-  }).then(() => done()))
+  }).then(() => done())
 }
 
-module.exports = { populateFoodTypes };
+module.exports = { populateFoodtypes }
