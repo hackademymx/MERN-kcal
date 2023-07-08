@@ -22,7 +22,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "jest": "^24.9.0",
+    "jest": "^29.6.1",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
     "supertest": "^4.0.2"
